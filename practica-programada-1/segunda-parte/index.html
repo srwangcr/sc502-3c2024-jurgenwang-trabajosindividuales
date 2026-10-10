@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Doctor - WebTech Solutions Clinic</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Checkbox oculto para el Modo Oscuro (Sin JS) -->
+    <input type="checkbox" id="dark-toggle" class="toggle-checkbox">
+
+    <!-- Barra de Navegación -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#perfil" class="active">Perfil del Doctor</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <!-- Switch visual para el modo oscuro -->
+                <li><label for="dark-toggle" class="toggle-label">🌓 Tema</label></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <!-- Sección de Perfil del Doctor -->
+        <section class="doctor-profile" id="perfil">
+            <div class="profile-card">
+                <!-- 1. Diferencial: Indicador de Disponibilidad en Vivo -->
+                <div class="status-badge">
+                    <span class="pulse-dot"></span> Disponible en consulta
+                </div>
+
+                <h1 class="doctor-name">Dr. José Martínez</h1>
+                <h2 class="doctor-specialty">Especialista en Cardiología</h2>
+                
+                <p id="doctor-bio">
+                    El Dr. José Martínez cuenta con más de 15 años de experiencia en el cuidado del corazón, atendiendo a cientos de pacientes con problemas cardiovasculares.
+                </p>
+
+                <!-- 4. Diferencial: Dashboard de Métricas / KPIs -->
+                <div class="kpi-container">
+                    <div class="kpi-item">
+                        <span class="kpi-number">+15</span>
+                        <span class="kpi-text">Años de Exp.</span>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-number">1,200+</span>
+                        <span class="kpi-text">Pacientes</span>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-number">98%</span>
+                        <span class="kpi-text">Satisfacción</span>
+                    </div>
+                </div>
+
+                <!-- 3. Diferencial: Botón que activa el Modal por enlace de destino (:target) -->
+                <a href="#appointment-modal" class="btn-appointment">Agendar Cita</a>
+            </div>
+        </section>
+
+        <!-- Sección de Comentarios de Pacientes -->
+        <section class="testimonials-section">
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <h3 class="patient-name">María Pérez</h3>
+                    <p class="patient-comment">"El Dr. Martínez me brindó un excelente tratamiento, ¡muy profesional!"</p>
+                    <span class="consultation-date">Fecha de consulta: 20/08/2023</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <h3 class="patient-name">Juan Ramírez</h3>
+                    <p class="patient-comment">"Muy atento y cuidadoso en su diagnóstico, lo recomiendo ampliamente."</p>
+                    <span class="consultation-date">Fecha de consulta: 10/09/2023</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <h3 class="patient-name">Ana Gómez</h3>
+                    <p class="patient-comment">"Gracias a su tratamiento me siento mucho mejor. Excelente doctor."</p>
+                    <span class="consultation-date">Fecha de consulta: 05/09/2023</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 3. Diferencial: Ventana Modal Interactiva (CSS :target) -->
+    <div id="appointment-modal" class="modal-overlay">
+        <div class="modal-card">
+            <h2>Solicitud de Cita Médica</h2>
+            <p>Seleccione el método de confirmación con el Dr. José Martínez.</p>
+            <form class="modal-form">
+                <label>Fecha sugerida: <input type="date"></label>
+                <button type="button" class="btn-confirm">Confirmar Solicitud</button>
+            </form>
+            <!-- Enlace vacío para cerrar el modal limpiamente -->
+            <a href="#" class="close-modal">Cerrar Ventana &times;</a>
+        </div>
+    </div>
+
+</body>
+</html>
